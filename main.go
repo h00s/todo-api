@@ -4,11 +4,17 @@ import (
 	"log"
 
 	"github.com/gin-gonic/gin"
+	"github.com/h00s/todo-api/config"
 	"github.com/h00s/todo-api/logger"
 )
 
 func main() {
-	l, err := logger.New("todo-api.log")
+	c, err := config.Load("configuration.json")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	l, err := logger.New(c.Log.Filename)
 	if err != nil {
 		log.Fatal(err)
 	}

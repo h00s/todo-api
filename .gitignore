@@ -2,4 +2,6 @@ configuration.json
 configuration_test.json
 todo-api
 todo-api.log
+todo-api-dev.log
+todo-api-test.log
 logger/logger_test.log

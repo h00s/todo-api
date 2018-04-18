@@ -1,0 +1,18 @@
+{
+  "database": {
+    "host": "127.0.0.1",
+    "port": "5432",
+    "user": "user",
+    "password": "secret",
+    "name": "todo_api"
+  },
+  "server": {
+    "address": "127.0.0.1:8000"
+  },
+  "log": {
+    "filename": "todo-api.log"
+  },
+  "router": {
+    "release": false
+  }
+}
