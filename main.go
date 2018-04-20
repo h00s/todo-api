@@ -20,6 +20,9 @@ func main() {
 	}
 	defer l.Close()
 
+	if c.Router.Release {
+		gin.SetMode(gin.ReleaseMode)
+	}
 	r := gin.Default()
 	v1 := r.Group("/v1")
 	{
@@ -29,5 +32,5 @@ func main() {
 	}
 
 	l.Info("Starting server..")
-	r.Run()
+	r.Run(c.Server.Address)
 }
